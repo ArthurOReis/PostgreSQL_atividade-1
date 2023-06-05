@@ -25,4 +25,10 @@ INSERT INTO Restaurante VALUES('2876429', 'Alberto', '567321', 25, 'Arroz, Feij√
 INSERT INTO escola VALUES ('346542', 'Escola S', '526478', 12, '2876429'), ('124214', 'Adalberto', '77756', 23, '1478121'),
 ('111232', 'Vis√£o', '56235', 26, '619782'), ('78942', 'Promissor', '326471',25, '672534');
 
-SELECT * from restaurante WHERE nome = 'Frangote' OR nome != 'Coxitos' ORDER BY numero ASC
+SELECT * from restaurante WHERE nome = 'Frangote' OR nome != 'Coxitos' ORDER BY numero ASC;
+SELECT COUNT(numero) FROM restaurante;
+
+SELECT * FROM restaurante, escola;
+
+SELECT escola.nome, restaurante.nome FROM escola INNER JOIN restaurante on escola.cnpj_restaurante = restaurante.cnpj
+SELECT escola.nome, restaurante.nome FROM escola RIGHT JOIN restaurante on escola.cnpj_restaurante = restaurante.cnpj
